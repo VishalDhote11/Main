@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="testClasses.MyListners"></listener>
+	</listeners>
+  <test thread-count="5" name="ChromeTest">
+		<parameter name="browserName" value="chrome"></parameter>
+  
+    <classes>
+      <class name="testClasses.TC_001_LoginTestClass"/>
+      <class name="testClasses.Tc_002_AllProducts"/>
+      <class name="testClasses.TC_003_VerifyLogoutFunctionality"/>
+      <class name="testClasses.TC_004_VerifySortByFunctionality"/>
+      <class name="testClasses.TC_005_VerifyCart"/>
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="EdgeTest">
+		<parameter name="browserName" value="edge"></parameter>
+  
+    <classes>
+     <class name="testClasses.TC_006_VerifyRemoveFuctionality"/>
+      <class name="testClasses.TC_007_VerifyContinueShopping"/>
+      <class name="testClasses.TC_008_VerifyCheckoutFunction"/>
+      <class name="testClasses.TC_009_FillInformationAndContinue"/>
+      <class name="testClasses.TC_010_VerifyThankYou"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
